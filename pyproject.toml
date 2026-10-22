@@ -1,6 +1,6 @@
 [project]
 name = "simple-solar-declination-calc"
-version = "0.1.0"
+version = "0.1.1"
 description = "Computes solar declination angle by day of year using Cooper's formula."
 requires-python = ">=3.10"
 dependencies = []
