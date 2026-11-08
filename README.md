@@ -40,3 +40,10 @@ take a year argument.
 Day 0 and day 367 raise `ValueError`.
 - Day 366 is accepted but, in a non-leap year, does not correspond to any real date.
 This library intentionally does not take a year, so it cannot police that for you.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
